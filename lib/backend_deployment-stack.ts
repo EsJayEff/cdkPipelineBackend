@@ -14,5 +14,13 @@ export class BackendDeploymentStack extends cdk.Stack {
       },
     });
 
+    const productTable2 = new ddb.Table(this, 'Table2', {
+      tableName:"TestTable2",
+      partitionKey: {
+        name: 'id',
+        type: ddb.AttributeType.STRING,
+      },
+    });
+
   }
 }
